@@ -1,0 +1,14 @@
+Create one folder like 
+/home/shruti/cscope/project_db
+
+Go to your repo and run below cmd 
+find  $PWD  -name "*.[chxsS]" -print > /home/shruti/cscope/project_db/cscope.files 
+
+Then go to /home/shruti/cscope/project_db
+and run following cmd
+cscope -b -q -k
+
+Now you can create shell script with below commands
+
+#!/bin/sh
+export CSCOPE_DB="/home/shruti/cscope/project_db/cscope.out" 
